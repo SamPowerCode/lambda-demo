@@ -1,3 +1,13 @@
+'''
+The filter() function constructs an iterator from elements of an iterable for which a function returns True.
+
+    Syntax: filter(function, iterable)
+
+    Parameters:
+        function: A function that tests each element of the iterable. It should return True or False.
+        iterable: The iterable to be filtered.
+'''
+
 my_numbers = [1, 2, 3, 4, 5]
 
 def is_even_func(x):
