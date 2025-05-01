@@ -38,3 +38,34 @@ print(sorted_data)
 words = ["apple", "banana", "cherry"]
 sorted_words = sorted(words, key=lambda x: len(x))
 print(sorted_words)  # Output: ['apple', 'cherry', 'banana']
+
+
+# 1. Using sorted() with a List
+numbers = [5, 2, 9, 1, 5, 6]
+sorted_numbers = sorted(numbers, key=lambda x: -x)
+print("Sorted numbers (descending):", sorted_numbers)  # Output: [9, 6, 5, 5, 2, 1]
+
+# 2. Using sorted() with a Tuple
+words = ("banana", "apple", "cherry", "date")
+sorted_words = sorted(words, key=lambda word: len(word))
+print("Sorted words by length:", sorted_words)  # Output: ['date', 'apple', 'banana', 'cherry']
+
+# 3. Using sorted() with a String
+text = "hello"
+sorted_chars = sorted(text)
+print("Sorted characters:", ''.join(sorted_chars))  # Output: "ehllo"
+
+# 4. Using sorted() with a Set
+numbers_set = {5, 3, 9, 1, 4}
+sorted_set = sorted(numbers_set)
+print("Sorted set:", sorted_set)  # Output: [1, 3, 4, 5, 9]
+
+# 5. Using sorted() with a Dictionary
+my_dict = {'a': 3, 'b': 1, 'c': 2}
+sorted_items = sorted(my_dict.items(), key=lambda item: item[1])
+print("Sorted dictionary items by value:", sorted_items)  # Output: [('b', 1), ('c', 2), ('a', 3)]
+
+# 6. Using sorted() with Multiple Criteria
+data = [(1, 3), (1, 2), (2, 1), (2, 3)]
+sorted_data = sorted(data, key=lambda x: (x[0], x[1]))
+print("Sorted data by multiple criteria:", sorted_data)  # Output: [(1, 2), (1, 3), (2, 1), (2, 3)]
